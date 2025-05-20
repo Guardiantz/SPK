@@ -16,7 +16,7 @@ function query($query){
 
 function tambah($data){
     global $conn;
-
+    
     // Ambil data dari tiap elemen form
     $nama = htmlspecialchars($data["nama"]);
     $tanggal = htmlspecialchars($data["tanggal"]);
@@ -201,8 +201,6 @@ function ubah($data){
     $masakerja = htmlspecialchars($data["masakerja"]);
     $pend_ter = htmlspecialchars($data["pendidikan"]);
     
-
-
     // query insert data
     $query = "UPDATE guru SET
                 nama = '$nama',

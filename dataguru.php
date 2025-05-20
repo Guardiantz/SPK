@@ -92,7 +92,7 @@ if($sus == 0){
                     <td><?= $row["alamat"]; ?></td>
                     <td>
                         <a href="tambah/ubah.php?id=<?= $row["id"]; ?>" class="button">Ubah</a> |
-                        <a href="hapus/hapus.php?id=<?= $row["id"]; ?>" class="button" onclick="return confirm('yakin ingin menghapus?');">hapus</a>
+                        <a href="hapus/hapus.php?id=<?= $row["id"]; ?>" class="button" onclick="return confirm('yakin ingin menghapus?');">Hapus</a>
                     </td>
                 </tr>
             </tbody>

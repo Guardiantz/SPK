@@ -91,13 +91,6 @@ if( isset($_POST['submit']) ){
                 </div>
 			</form>
 
-
-
-
 </body>
-
-
-
-
 
 </html>

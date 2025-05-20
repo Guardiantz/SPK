@@ -26,7 +26,7 @@ if( isset($_POST["submit"]) ){
         echo "
         <script>
             alert('data berhasil ditambahkan!');
-            window.location = '../index.php';
+            window.location = '../dataguru.php';
         </script>
         ";
     }else{
@@ -89,7 +89,7 @@ if( isset($_POST["submit"]) ){
 											</tr>
 											<tr>
 												<td>Umur</td>
-													<td ><input type="text" id="telpon" name="umur" ng-model="form.telpon" required onkeypress="return isNumber(event)" class='form-control'></td>
+													<td ><input type="number" id="telpon" name="umur" ng-model="form.telpon" required onkeypress="return isNumber(event)" class='form-control'></td>
 											</tr>
 											<div class="control-group">
 													<tr>
@@ -98,8 +98,8 @@ if( isset($_POST["submit"]) ){
 														<td>
 															<div class="form-group">
 																<div class="col-sm-6">
-																	<input type="radio" name="jenis" ng-model="form.jenis" required value='Laki-laki'> Laki - Laki &nbsp;
-																	<input type="radio" name="jenis" ng-model="form.jenis" required value='Perempuan'> Perempuan
+																	<input type="radio" name="telpon" ng-model="form.jenis" required value='Laki-laki'> Laki - Laki &nbsp;
+																	<input type="radio" name="telpon" ng-model="form.jenis" required value='Perempuan'> Perempuan
 																</div>
 															  </div>	
 														</td>
@@ -110,7 +110,7 @@ if( isset($_POST["submit"]) ){
 											<tr>
 													<td>Jabatan</td>
 													<td>
-														<select class="form-control" name="jabatan" required >
+														<select class="form-control" name="kelamin" required >
 															<option value="">-</option>
                                                             <option value="Kepala Sekolah">Kepala Sekolah</option>
                                                             <option value="Guru">Guru</option>
@@ -121,7 +121,7 @@ if( isset($_POST["submit"]) ){
 												<tr>
 													<td>Pendidikan Terakhir</td>
 													<td>
-														<select class="form-control" name="pendidikan" required >
+														<select class="form-control" name="pend_ter" required >
 															<option value="" >-</option>
                                                             <option value="SMA">SMA</option>
                                                             <option value="S1">S1</option>
@@ -132,7 +132,7 @@ if( isset($_POST["submit"]) ){
 												<tr>
 													<td>Masa Kerja</td>
 													<td>
-														<select class="form-control" name="masakerja" required >
+														<select class="form-control" name="alamat" required >
                                                             <option value="">-</option>
                                                             <option value="1 Tahun">1 Tahun</option>
                                                             <option value="2 Tahun">2 Tahun</option>
@@ -145,8 +145,8 @@ if( isset($_POST["submit"]) ){
 												
 												<tr>
 													<td align="center" colspan="2">
-													<button type="submit" name="submit">
-													<span class="glyphicon glyphicon-plus"></span>Tambah Data</button>
+													<button type="submit" name="submit" class="btn btn-primary">
+													<span class="glyphicon glyphicon-plus " ></span>Tambah Data</button>
 													</td>
 												</tr>
 											</div>
@@ -338,10 +338,6 @@ if( isset($_POST["submit"]) ){
 		</script>
 	</body>
 </html>
-
-
-
-
 
 
 <?php endif; ?>

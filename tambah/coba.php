@@ -56,11 +56,12 @@ if( isset($_POST["simpan"]) ){
 
 <form action="" method="post">
 <div style="padding-top: 25px;">
+
                         
-<h2 align="center">Penilaian Kinerja Guru</h2>
+<h2 align="center">Penilaian Kinerja Guru</h2> <br>
 						
 <div class="row">
-	<div class='col-sm-3'></div>
+	<div class='col-sm-1'></div>
 		<div class='col-sm-5'>
 <table class='table table-bordered'>
     <tr>
@@ -83,17 +84,10 @@ if( isset($_POST["simpan"]) ){
 </table>
             </div>
 </div>
-<h4 align="center"> *Keterangan skor <br>
-                    1 = Sangat Kurang,
-                    2 = Kurang,
-                    3 = Baik,
-                    4 = Sangat Baik
-
-        </h4>
-        <br>		
+        
 <div class="row">
-	<div class='col-sm-3'></div>
-		<div class='col-sm-6'>
+	<div class='col-sm-1'></div>
+		<div class='col-sm-5'>
         <table class='table table-bordered'>
 
                 <tr>
@@ -107,8 +101,9 @@ if( isset($_POST["simpan"]) ){
                         <label for="">Komponen Penilaian</label>
                     </td>
                     <td colspan="4">
-                        <label for="">Skor</label>
+                        <label for="">Data Penilaian</label>
                     </td>
+                    
                 </tr>
                 <tr>
                     <td>
@@ -118,28 +113,24 @@ if( isset($_POST["simpan"]) ){
                         <label for="">1. </label>
                     </td>
                     <td>
-                        <label for="">Program Tahunan</label>
+                            <label for="">Program Tahunan</label>
+                        <td>
+                            <input type="text" name="1" value="1" required> 
+                        </td>
+                        <td>
+                            <input type="text" name="1" value="2"> 
+                        </td>
+                        <td>
+                            <input type="text" name="1" value="3"> 
+                        </td>
+                        <td>
+                            <input type="text" name="1" value="4"> 
+                        </td>
+
                     </td>
-                    <td>
-                        <input type="radio" name="1" value="1" required> 1
-                    </td>
-                    <td>
-                        <input type="radio" name="1" value="2"> 2
-                    </td>
-                    <td>
-                        <input type="radio" name="1" value="3"> 3
-                    </td>
-                    <td>
-                        <input type="radio" name="1" value="4"> 4
-                    </td>
+                    
                 </tr>
 
-
-                <tr>
-                    <td colspan="7">
-                        <label for="">-</label>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -150,7 +141,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="">Program Semester</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="2" value="1"> 1
                     </td>
                     <td>
@@ -161,15 +152,9 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="2" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -180,7 +165,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Silabus</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="3" value="1"> 1
                     </td>
                     <td>
@@ -191,14 +176,9 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="3" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -209,7 +189,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden> RPP </label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="4" value="1"> 1
                     </td>
                     <td>
@@ -220,14 +200,9 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="4" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -238,7 +213,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Buku Evaluasi</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="5" value="1"> 1
                     </td>
                     <td>
@@ -249,14 +224,10 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="5" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -267,7 +238,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Daftar Nilai</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="6" value="1"> 1
                     </td>
                     <td>
@@ -278,14 +249,10 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="6" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -296,7 +263,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Analisis Hasil Evaluasi</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="7" value="1"> 1
                     </td>
                     <td>
@@ -307,7 +274,7 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="7" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
                 <tr>
@@ -326,24 +293,19 @@ if( isset($_POST["simpan"]) ){
                         <label for="">Program Perbaikan</label>
                     </td>
                     <td>
-                        <input type="radio" name="8" value="1"> 1
+                        <input type="text" name="8" value="1">
                     </td>
                     <td>
-                        <input type="radio" name="8" value="2"> 2
+                        <input type="text" name="8" value="2">
                     </td>
                     <td>
-                        <input type="radio" name="8" value="3"> 3
+                        <input type="text" name="8" value="3">
                     </td>
                     <td>
-                        <input type="radio" name="8" value="4"> 4
+                        <input type="text" name="8" value="4">
                     </td>
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -354,7 +316,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Program Pengayaan</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="9" value="1"> 1
                     </td>
                     <td>
@@ -365,14 +327,10 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="9" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -383,7 +341,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Buku Bimbingan </label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="10" value="1"> 1
                     </td>
                     <td>
@@ -394,14 +352,10 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="10" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
-                <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td>
                         <label collrow for=""></label>
@@ -409,10 +363,12 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="">11</label>
                     </td>
+
+                    
                     <td>
                         <label for="" hiden>KKM</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="11" value="1"> 1
                     </td>
                     <td>
@@ -423,14 +379,15 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="11" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
                 <tr>
                     <td colspan="7">
-                        <label for="">-</label>
+                        <label for="">.</label>
                     </td>
                 </tr>
+                
                 <tr>
                 <td>
                         <label collrow for="">Manajemen Administrasi Pendidikan</label>
@@ -442,16 +399,16 @@ if( isset($_POST["simpan"]) ){
                         <label for="">Kalender Pendidikan</label>
                     </td>
                     <td>
-                        <input type="radio" name="12" value="1"> 1
+                        <input type="text" name="12" value="1">
                     </td>
                     <td>
-                        <input type="radio" name="12" value="2"> 2
+                        <input type="text" name="12" value="2">
                     </td>
                     <td>
-                        <input type="radio" name="12" value="3"> 3
+                        <input type="text" name="12" value="3">
                     </td>
                     <td>
-                        <input type="radio" name="12" value="4"> 4
+                        <input type="text" name="12" value="4">
                     </td>
                 </tr>
 
@@ -465,7 +422,7 @@ if( isset($_POST["simpan"]) ){
                     <td>
                         <label for="" hiden>Daftar Kelas</label>
                     </td>
-                    <td>
+                    <!-- <td>
                         <input type="radio" name="13" value="1"> 1
                     </td>
                     <td>
@@ -476,7 +433,7 @@ if( isset($_POST["simpan"]) ){
                     </td>
                     <td>
                         <input type="radio" name="13" value="4"> 4
-                    </td>
+                    </td> -->
                 </tr>
 
                 <tr>
@@ -495,27 +452,23 @@ if( isset($_POST["simpan"]) ){
                         <label for="">Tabungan Soal</label>
                     </td>
                     <td>
-                        <input type="radio" name="14" value="1"> 1
+                        <input type="text" name="14" value="1">
                     </td>
                     <td>
-                        <input type="radio" name="14" value="2"> 2
+                        <input type="text" name="14" value="2">
                     </td>
                     <td>
-                        <input type="radio" name="14" value="3"> 3
+                        <input type="text" name="14" value="3">
                     </td>
                     <td>
-                        <input type="radio" name="14" value="4"> 4
+                        <input type="text" name="14" value="4">
                     </td>
                 </tr>
       
+                
                 <tr>
-                    <td colspan="7">
-                        <label for="">.</label>
-                    </td>
-                </tr>
-                <tr>
-                        <td align="center" colspan="6">
-                            <button type="submit" name="simpan">
+                        <td align="center" colspan="7">
+                            <button type="submit" name="simpan" class="btn btn-primary">
                             <span class="glyphicon glyphicon-plus"></span>Tambah Data</button>
                         </td>
                 </tr>
