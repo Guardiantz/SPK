@@ -16,23 +16,26 @@ function query($query){
 
 function tambah($data){
     global $conn;
-    // ambil data dari tiap elemen form
+    
+    // Ambil data dari tiap elemen form
     $nama = htmlspecialchars($data["nama"]);
-    $umur = htmlspecialchars($data["umur"]);
-    $kelamin = htmlspecialchars($data["jenis"]);
-    $jabatan = htmlspecialchars($data["jabatan"]);
-    $masakerja = htmlspecialchars($data["masakerja"]);
-    $pend_ter = htmlspecialchars($data["pendidikan"]);
+    $tanggal = htmlspecialchars($data["tanggal"]);
+    $telpon = htmlspecialchars($data["telpon"]);
+    $kelamin = htmlspecialchars($data["kelamin"]);
+    $alamat = htmlspecialchars($data["alamat"]);
+    $pend_ter = htmlspecialchars($data["pend_ter"]);
 
-    // query insert data
-    $query = "INSERT INTO  guru
-                VALUES
-                ('', '$nama', '$umur', '$kelamin', '$jabatan', '$masakerja', '$pend_ter')
-                ";
-    mysqli_query($conn, $query);
-    return mysqli_affected_rows($conn);
+    // Gunakan prepared statement untuk keamanan
+    $query = "INSERT INTO guru (nama, tanggal, telpon, kelamin, alamat, pend_ter) VALUES (?, ?, ?, ?, ?, ?)";
+    
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, "ssssss", $nama, $tanggal, $telpon, $kelamin, $alamat, $pend_ter);
+    mysqli_stmt_execute($stmt);
 
+    return mysqli_stmt_affected_rows($stmt);
 }
+
+
 
 // function tambahNilai($data){
 //     global $conn;
@@ -108,36 +111,35 @@ function tambahLain($data){
 
 }
 
-function tambahnilai($nilai){
+function tambahnilai($nilai) {
     global $conn;
-    
-    $nama = $nilai["nama"];
-    $k1 = $nilai["1"];
-    $k2 = $nilai["2"];
-    $k3 = $nilai["3"];
-    $k4 = $nilai["4"];
-    $k5 = $nilai["5"];
 
-    $k6 = $nilai["6"];
-    $k7 = $nilai["7"];
-    $k8 = $nilai["8"];
-    $k9 = $nilai["9"];
-    $k10 = $nilai["10"];
+    // Pastikan semua key ada sebelum digunakan
+    $nama = isset($nilai["nama"]) ? $nilai["nama"] : '';
+    $k1 = isset($nilai["1"]) ? $nilai["1"] : '';
+    $k2 = isset($nilai["2"]) ? $nilai["2"] : '';
+    $k3 = isset($nilai["3"]) ? $nilai["3"] : '';
+    $k4 = isset($nilai["4"]) ? $nilai["4"] : '';
+    $k5 = isset($nilai["5"]) ? $nilai["5"] : '';
+    $k6 = isset($nilai["6"]) ? $nilai["6"] : '';
+    $k7 = isset($nilai["7"]) ? $nilai["7"] : '';
+    $k8 = isset($nilai["8"]) ? $nilai["8"] : '';
+    $k9 = isset($nilai["9"]) ? $nilai["9"] : '';
+    $k10 = isset($nilai["10"]) ? $nilai["10"] : '';
+    $k11 = isset($nilai["11"]) ? $nilai["11"] : '';
+    $k12 = isset($nilai["12"]) ? $nilai["12"] : '';
+    $k13 = isset($nilai["13"]) ? $nilai["13"] : '';
+    $k14 = isset($nilai["14"]) ? $nilai["14"] : '';
 
-    $k11 = $nilai["11"];
-    $k12 = $nilai["12"];
-    $k13 = $nilai["13"];
-    $k14 = $nilai["14"];
-   
+    // Pastikan jumlah kolom sesuai dengan jumlah yang ada di database
+    $query = "INSERT INTO nilai2 (nama, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14) 
+              VALUES ('$nama', '$k1', '$k2', '$k3', '$k4', '$k5', '$k6', '$k7', '$k8', '$k9', '$k10', '$k11', '$k12', '$k13', '$k14')";
 
-    $query = "INSERT INTO nilai2 VALUES('', '$nama', '$k1', '$k2', '$k3', '$k4', '$k5', '$k6', '$k7', '$k8', '$k9', '$k10',
-                                            '$k11', '$k12', '$k13', '$k14')" ;
-    
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
-
 }
+
 
 function ubahnilai($nilai){
     global $conn;
@@ -199,8 +201,6 @@ function ubah($data){
     $masakerja = htmlspecialchars($data["masakerja"]);
     $pend_ter = htmlspecialchars($data["pendidikan"]);
     
-
-
     // query insert data
     $query = "UPDATE guru SET
                 nama = '$nama',

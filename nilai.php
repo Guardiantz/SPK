@@ -69,6 +69,8 @@ if ($sus == 0) {
                 <?php $i = 1; ?>
                 <?php foreach ($nilai as $row) : ?>
                     <?php
+                    // logika untuk menentukan nilai 
+
                     $jumlah_k1 = $row["k1"] + $row["k2"] + $row["k3"] + $row["k4"] + $row["k5"] + $row["k6"] + $row["k7"];
                     $kriteria1 = ($jumlah_k1 / 28) * 100;
 

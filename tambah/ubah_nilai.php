@@ -76,12 +76,6 @@ if (isset($_POST["simpan"])) {
                         </table>
                 </div>
             </div>
-            <h4 align="center"> *Keterangan skor <br>
-                1 = Sangat Kurang,
-                2 = Kurang,
-                3 = Baik,
-                4 = Sangat Baik
-            </h4>
             <br>
             <div class="row">
                 <div class='col-sm-3'></div>
@@ -94,11 +88,11 @@ if (isset($_POST["simpan"])) {
                             <td align="center">
                                 <label for="">No</label>
                             </td>
-                            <td align="center">
+                            <!-- <td align="center">
                                 <label for="">Komponen Penilaian</label>
-                            </td>
-                            <td colspan="4">
-                                <label for="">Skor</label>
+                            </td> -->
+                            <td colspan="5">
+                                <label for="">Penilaian Kinerja </label>
                             </td>
                         </tr>
                         <?php
@@ -127,20 +121,20 @@ if (isset($_POST["simpan"])) {
                                 <td><?php echo $komponen[0]; ?></td>
                                 <td></td>
                                 <td>
-                                    <input type="radio" name="<?php echo $komponen[2]; ?>" value="1"
-                                           <?php if ($row[$komponen[2]] == "1") echo 'checked' ?>> 1
+                                    <input type="text" name="<?php echo $komponen[2]; ?>" value="1"
+                                           <?php if ($row[$komponen[2]] == "1") echo 'checked' ?>> 
                                 </td>
                                 <td>
-                                    <input type="radio" name="<?php echo $komponen[2]; ?>" value="2"
-                                           <?php if ($row[$komponen[2]] == "2") echo 'checked' ?>> 2
+                                    <input type="text" name="<?php echo $komponen[2]; ?>" value="2"
+                                           <?php if ($row[$komponen[2]] == "2") echo 'checked' ?>> 
                                 </td>
                                 <td>
-                                    <input type="radio" name="<?php echo $komponen[2]; ?>" value="3"
-                                           <?php if ($row[$komponen[2]] == "3") echo 'checked' ?>> 3
+                                    <input type="text" name="<?php echo $komponen[2]; ?>" value="3"
+                                           <?php if ($row[$komponen[2]] == "3") echo 'checked' ?>> 
                                 </td>
                                 <td>
-                                    <input type="radio" name="<?php echo $komponen[2]; ?>" value="4"
-                                           <?php if ($row[$komponen[2]] == "4") echo 'checked' ?>> 4
+                                    <input type="text" name="<?php echo $komponen[2]; ?>" value="4"
+                                           <?php if ($row[$komponen[2]] == "4") echo 'checked' ?>> 
                                 </td>
                             </tr>
                             <?php

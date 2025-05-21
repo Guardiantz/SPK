@@ -55,7 +55,7 @@ if( isset($_POST["submit"]) ){
                 <input type="text" name="telpon" id="telpon" required>
             </li>
             <li>
-                <button type="submit" name="submit">Tambah Data</button>
+                <button  type="submit" name="submit" class="btn btn-primary">Tambah Data</button>
             </li>
         </ul>
 

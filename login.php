@@ -14,8 +14,6 @@
     }
 ?>
 
-
-
 <div class="login">
     <h2 class="login-header">Silahkan Login</h2>
 
